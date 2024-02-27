@@ -56,7 +56,13 @@ body {
     width: 100%;
   }
 
-  
+  .flex-column {
+
+  }
+
+  .flex-column  {
+
+  }
   
   button {
     display: inline-block;
@@ -69,10 +75,14 @@ body {
     color: white;
     border: 0;
     transition: background-color 0.1s;
+    text-decoration: none;
   }
   
   button:hover {
     background-color: #8570a5;
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transition: transform 150em;
   }
   
   .choices button {
