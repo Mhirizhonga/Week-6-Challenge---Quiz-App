@@ -73,5 +73,11 @@ function startTimer()  {
     }, 1000 );  //Update every second
 }
 
+//Function to end the quiz
+function endQuiz()  {
+    let endHTML = '<h2>Quiz Ended!</h2><p>Your score is: ' + score + '</p><label for="initials">Enter your initials:</label><input type="text" id="initials"><button onclick="saveScore()">Save Score</button>';
+    mainDisplay.innerHTML = endHTML;
+    questionContainer.style.display = 'none'; //hide question counter
+}
 
 });
