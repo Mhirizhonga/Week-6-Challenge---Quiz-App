@@ -60,5 +60,18 @@ function checkAnswer(answer)  {
     renderQuestion(); //render next question
 }
 
+// Function to start timer
+function startTimer()  {
+    const timer = setInterval(function ()  {
+          timeLeft--;
+          countdownDisplay.textContent = 'Time: ' + timeLeft;
+
+          if (timeLeft <= 0)  {
+            clearInterval(timer);  //Stop the timer when time runs out
+            endQuiz();
+          }
+    }, 1000 );  //Update every second
+}
+
 
 });
