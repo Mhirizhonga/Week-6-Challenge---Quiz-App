@@ -48,5 +48,17 @@ function renderQuestion()  {
     }
 }
 
+// Function to check answer
+function checkAnswer(answer)  {
+    const correctAnswer = questions[questionIndex].answer;
+    if (answer === correctAnswer)  {
+        score++; //increasing score if answer is correct
+    } else  {
+        timeLeft -= 5; //Deduct 10 seconds if the answer is correct
+    }
+    questionIndex++; //moving to next question
+    renderQuestion(); //render next question
+}
+
 
 });
