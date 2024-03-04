@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function ()  {
     var startButton = document.querySelector('.btn');
-    var countdownDisplay = document.getElementById('main');
     var mainDisplay = document.getElementById('main');
     var questionContainer = document.getElementById('home');
+    var timerDisplay = document.getElementById('countdown');
 
     let questionIndex = 0;
     let score = 0;
@@ -28,7 +28,8 @@ var questions = [
 ];
 
 //F to start the quiz
-function startQuiz() {
+function startQuiz(event) {
+    event.preventDefault();
     startButton.style.display = 'none'; //Hide the start button
     renderQuestion(); //Display the first question
     startTimer(); //Start the timer
@@ -42,7 +43,8 @@ function renderQuestion()  {
         questionData.options.forEach(function(option) {
             questionHTML += '<button onclick="checkAnswer(\'' + option + '\')">' + option + '</button>';
         });
-        questionHTML += '</div>'; 
+        questionHTML += '</div>';
+        mainDisplay.innerHTML = questionHTML;
     } else  {
         endQuiz();  //No more questions, emd of quiz
     }
@@ -64,7 +66,7 @@ function checkAnswer(answer)  {
 function startTimer()  {
     const timer = setInterval(function ()  {
           timeLeft--;
-          countdownDisplay.textContent = 'Time: ' + timeLeft;
+          timerDisplay.textContent = 'Time: ' + timeLeft;
 
           if (timeLeft <= 0)  {
             clearInterval(timer);  //Stop the timer when time runs out
@@ -80,4 +82,10 @@ function endQuiz()  {
     questionContainer.style.display = 'none'; //hide question counter
 }
 
+function saveScore()  {
+    const initialsInput = document.getElementById('initials');
+    const initials = initialsInput.value.trim();
+}
+
+startButton.addEventListener('click', startQuiz);
 });
