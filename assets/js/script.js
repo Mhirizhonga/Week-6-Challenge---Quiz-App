@@ -85,7 +85,7 @@ function checkAnswer(isCorrect)  {
     if (currentQuestionIndex < questions.length)  {
         showQuestion()
     } else  {
-        endQuiz();
+        endQuiz()
     }
 }
 
