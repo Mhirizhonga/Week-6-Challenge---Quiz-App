@@ -52,14 +52,14 @@ function startQuiz()  {
 }
 
 function showQuestion()  {
-    console.log(showQuestion);
+    //console.log(showQuestion);
     const currentQuestion = questions[currentQuestionIndex];
-    console.log(currentQuestion);
+   // console.log(currentQuestion);
     const titleValue = document.getElementById("question-title")
     titleValue.textContent = currentQuestion.question;
     choicesDiv.innerHTML = "";
     currentQuestion.choices.forEach( function (choice) {
-        console.log(choice);
+       // console.log(choice);
         const button = document.createElement("button");
         button.setAttribute("class", "choice")
         button.setAttribute("value", choice)
@@ -67,26 +67,35 @@ function showQuestion()  {
         // button.addEventListener("click", function ()  {
         //     checkAnswer(choice === currentQuestion.correctAnswer);
         // });
-        button.onclick = checkAnswer;
+        //button.onclick = checkAnswer(currentQuestion.answer);
         choicesDiv.appendChild(button);
     });
+    const choices = document.querySelectorAll(".choice");
+    choices.forEach((choice) => {
+     choice.addEventListener("click", () =>  {
+        checkAnswer(choice.value === currentQuestion.correctAnswer)
+     })  
+    })
 }
 
 function checkAnswer(isCorrect)  {
-    if (!isCorrect) {
-        timeLeft -= 10;
-        //console.log("10 seconds penalised!");
-        if (timeLeft < 0) {
-            timeLeft = 0;
-        }    
-    }
-    updateTimerDisplay();
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length)  {
-        showQuestion()
-    } else  {
-        endQuiz()
-    }
+    console.log("CHECKANSWER", isCorrect);
+    // console.log("event", e);
+    // console.log(event)
+    // if (!isCorrect) {
+    //     timeLeft -= 10;
+    //     //console.log("10 seconds penalised!");
+    //     if (timeLeft < 0) {
+    //         timeLeft = 0;
+    //     }    
+    // }
+    // updateTimerDisplay();
+    // currentQuestionIndex++;
+    // if (currentQuestionIndex < questions.length)  {
+    //     showQuestion()
+    // } else  {
+    //     endQuiz()
+    // }
 }
 
 function startTimer()  {
