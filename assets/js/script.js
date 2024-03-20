@@ -94,7 +94,7 @@ function checkAnswer(isCorrect)  {
 }
 
 function startTimer()  {
-    const timerInterval = setInterval(function ()  {
+     timerInterval = setInterval(function ()  {
         timeLeft--;
         updateTimerDisplay();
         if (timeLeft === 0)  {
@@ -104,6 +104,7 @@ function startTimer()  {
     }, 1000);
 }
 
+clearInterval(timerInterval)
 function updateTimerDisplay()  {
     timeDisplay.textContent = timeLeft;
 }
@@ -123,7 +124,7 @@ function endQuiz()  {
         } else  {
             feedbackDiv.textContent = "Please enter your initials!"
         }
-    });git stat
+    });
 }
 
 startButton.addEventListener("click", startQuiz);
@@ -168,13 +169,12 @@ renderHighScores();
 function renderHighScores()  {
     const highScores = getHighScores();
     const highScoresList = document.getElementById("highscores");
-console.log(renderHighScores);
-    highScoresList.innerHTML = "";
+    highScoresList.innerHTML = "Hello";
 
-    highScores.forEach((score, index)  =>  {
-        const listItem = document.createElement("li");
-        listItem.textContent = `${index + 1}. ${score.initials}: ${score.score}`;
-        highScoresList.appendChild(listItem);
-   });
+//     highScores.forEach((score, index)  =>  {
+//         const listItem = document.createElement("li");
+//         listItem.textContent = `${index + 1}. ${score.initials}: ${score.score}`;
+//         highScoresList.appendChild(listItem);
+//    });
  }
 });
