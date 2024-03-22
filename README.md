@@ -1,6 +1,12 @@
-# Week-6-Challenge---Quiz-App
-Making an app utilising Javascript
+# Quiz App
 
+## Description
+This project is a quiz application designed to test users' knowledge of JavaScript fundamentals. It features a timed quiz with multiple-choice questions. Users can progress through the quiz, answering questions and receiving immediate feedback on their choices. At the end of the quiz, users can save their scores along with their initials.
+
+## User Story
+As a coding boot camp student, I want to take a timed quiz on JavaScript fundamentals that stores high scores so that I can gauge my progress compared to my peers.
+
+## Development Journey
 The first thing I had to do was to break the task into it's constituent parts. For this I referred to the user story and acceptance criteris as well as some sketching out of the steps required to succeed.
 
 - Timer Intervals
@@ -12,82 +18,33 @@ The first thing I had to do was to break the task into it's constituent parts. F
 - Events
 - Local Storage (High Scores and recording Scorers (by initial))
 
-## User Story
+## Usage
+1. Click the "Start" button to begin the quiz.
+2. Answer each question by selecting one of the provided choices.
+3. If the answer is correct, proceed to the next question. If incorrect, time will be deducted.
+4. Once all questions are answered or the timer reaches 0, the quiz ends, and the final score is displayed.
+5. Enter your initials and click "Submit" to save your score.
+6. Click "Go Back" to return to the start screen.
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Local Storage
 
-## Acceptance Criteria
+## Further Development
+To further add on to this project, I would focus on adding the "Clear Highscores" functionality.
 
-Create a code quiz that contains the following requirements:
+## Screenshot
 
-* A start button that when clicked a timer starts and the first question appears.
- 
-  * Questions contain buttons for each answer.
-  * 
-  * When answer is clicked, the next question appears
-  * 
-  * If the answer clicked was incorrect then subtract time from the clock
+Quiz Starting Page
+<img src="./assets/images/Starting Page.png">
 
-* The quiz should end when all questions are answered or the timer reaches 0.
+Quiz Underway
+<img src="./assets/images/Quiz Underway.png">
 
-  * When the game ends, it should display their score and give the user the ability to save their initials and their score
-  
-## Mock-Up
+Quiz Final Score
+<img src="./assets/images/Quiz Score.png">
 
-The following animation demonstrates the application functionality:
-
-![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their intials, then clears their intials and starts over.](./assets/08-web-apis-challenge-demo.gif)
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Quiz Score Saved
+<img src="./assets/images/Highscore saved.png">
