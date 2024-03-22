@@ -1,7 +1,7 @@
 # Quiz App
 
 ## Description
-This project is a quiz application designed to test users' knowledge of JavaScript fundamentals. It features a timed quiz with multiple-choice questions. Users can progress through the quiz, answering questions and receiving immediate feedback on their choices. At the end of the quiz, users can save their scores along with their initials.
+This project is a quiz application designed to test users' knowledge of JavaScript fundamentals + General knowledge questions for added fun. It features a timed quiz with multiple-choice questions. Users can progress through the quiz, answering questions and receiving immediate feedback on their choices. At the end of the quiz, users can save their scores along with their initials.
 
 ## User Story
 As a coding boot camp student, I want to take a timed quiz on JavaScript fundamentals that stores high scores so that I can gauge my progress compared to my peers.
